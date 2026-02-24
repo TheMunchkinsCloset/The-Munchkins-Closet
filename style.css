@@ -35,7 +35,7 @@ body {
 .nav a:hover { color: var(--accent); }
 
 .card {
-  background: rgba(17, 24, 42, 0.75);
+  background: rgba(94, 28, 138, 0.75);
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 18px;
@@ -46,7 +46,7 @@ body {
 button {
   background: var(--accent);
   border: 0;
-  color: #061022;
+  color: #431866;
   font-weight: 700;
   padding: 10px 14px;
   border-radius: 12px;
