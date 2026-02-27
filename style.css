@@ -1,59 +1,139 @@
+/* =========================
+   THE MUNCHKINS CLOSET
+   Purple Theme Stylesheet
+========================= */
+
+/* Root Colors */
 :root {
-  --bg: #2a163a;
-  --card: #7025ad;
-  --text: #e8eefc;
-  --muted: #a8b3cf;
-  --accent: #ad7aff;
-  --border: rgba(255, 255, 255, 0.08);
+    --primary-purple: #7b3fe4;
+    --dark-purple: #5a2bbd;
+    --light-purple: #efe7ff;
+    --accent-pink: #ffb6e6;
+    --text-dark: #333;
+    --white: #ffffff;
 }
 
-* { box-sizing: border-box; }
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 700px at 20% 10%, rgba(122,162,255,.22), transparent 60%),
-              radial-gradient(1000px 700px at 80% 0%, rgba(120,255,214,.12), transparent 55%),
-              var(--bg);
-  color: var(--text);
-  line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-purple);
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
-.container {
-  width: min(960px, 92%);
-  margin: 0 auto;
-  padding: 28px 0;
+/* Header */
+header {
+    background: var(--primary-purple);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.tagline { color: var(--muted); margin-top: 6px; }
-
-.nav { display: flex; gap: 14px; margin-top: 14px; flex-wrap: wrap; }
-.nav a {
-  color: var(--text);
-  text-decoration: none;
-  opacity: 0.9;
+header h1 {
+    font-size: 2rem;
 }
-.nav a:hover { color: var(--accent); }
 
+/* Navigation */
+nav {
+    background: var(--dark-purple);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-pink);
+}
+
+/* Main Section */
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Cards / Content Boxes */
 .card {
-  background: rgba(94, 28, 138, 0.75);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 18px;
-  margin: 14px 0;
-  backdrop-filter: blur(6px);
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(123, 63, 228, 0.15);
+    margin-bottom: 30px;
 }
 
-button {
-  background: var(--accent);
-  border: 0;
-  color: #431866;
-  font-weight: 700;
-  padding: 10px 14px;
-  border-radius: 12px;
-  cursor: pointer;
+/* Buttons */
+button,
+.btn {
+    background: var(--primary-purple);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
-button:hover { filter: brightness(1.05); }
 
-.muted { color: var(--muted); }
-.footer { opacity: 0.8; }
-code { color: #cfe1ff; }
+button:hover,
+.btn:hover {
+    background: var(--dark-purple);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: var(--primary-purple);
+    color: var(--white);
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Forms */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-purple);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
