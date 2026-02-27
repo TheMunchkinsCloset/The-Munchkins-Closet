@@ -1,5 +1,5 @@
-const DonationsBtn = document.getElementById("Donations");
+const donationsBtn = document.getElementById("donationsBtn");
 
-btn.addEventListener("click", () => {
+donationsBtn.addEventListener("click", () => {
   window.location.href = "Donations/";
 });
